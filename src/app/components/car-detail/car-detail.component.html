@@ -17,18 +17,14 @@
       <th>Daily Price</th>
     </tr>   <!--'490f5120-5b15-4570-9aec-e5467a8cc786.jpg'-->
   </thead>
-  <tr *ngFor="let car of cars">
-    <td><img [src]="'https://localhost:44309/Uploads/Images/'+ (car.imagePath ? car.imagePath : 'DefaultImage.jpg') "class="img-thumbnail" alt="Doesn't have image" width="175"></td>
+  <tr *ngFor="let car of cars"    >
+    <td><img [src]="'https://localhost:44309/Uploads/Images/'+ (car.imagePath ? car.imagePath : 'DefaultImage.jpg') "class="img-thumbnail" alt="Doesn't have image" width="200" ></td>
     <td>{{car.carName}}</td>
     <td>{{car.brandName}}</td>
     <td>{{car.modelYear}}</td>
     <td>{{car.colorName}}</td>
     <td>{{car.description}}</td>
     <td>{{car.dailyPrice}}</td>
-    <td>
-      <a routerLink="/car/cardetails/{{car.carId}}" >
-        <button (click)="setCurrentCar(car)"  class="btn btn-outline-primary" >Araç Detaylarını Gör</button>
-      </a>
-    </td>
   </tr>
 </table>
+
